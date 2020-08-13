@@ -13,7 +13,7 @@
     "element-ui": "^2.13.2" <% } %><% if (UIfrag === 'vant') { %>,
     "vant": "^2.10.2" <% } %><% if (useVueRouter) { %> ,
     "vue-router": "^3.4.3"<% } %><% if (useVuex) { %>,
-      "vuex": "^3.5.1" <% } %>
+    "vuex": "^3.5.1" <% } %>
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^4.5.0",

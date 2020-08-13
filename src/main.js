@@ -22,9 +22,7 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 new Vue({
-  <%_ if(useVueRouter){ _%>router,
-  <%_ } _%>
-  <%_ if(useVuex){_%>store,
-  <%_ } _%>
+  <% if(useVueRouter){ %>router,<% } %>
+  <% if(useVuex){%>store,<% } %>
   render: function (h) { return h(App) },
 }).$mount('#app')
