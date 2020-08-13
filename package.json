@@ -8,30 +8,23 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.6.11",
-    <% if (UIfrag === 'antVue') { %>"ant-design-vue": "^1.6.4",
-<%_ } _%> 
-    <% if (UIfrag === 'eleUI') { %>"element-ui": "^2.13.2", 
-<%_ } _%> 
-    <% if (UIfrag === 'vant') { _%>"vant": "^2.10.2",  
-<%_ } _%> 
-    <% if (useVueRouter) { %> "vue-router": "^3.4.3", 
-<%_ } _%>
-    <% if (useVuex) { %>"vuex": "^3.5.1" 
-      <%_ } _%>
+    "vue": "^2.6.11" <% if (UIfrag === 'antVue') { %>,
+    "ant-design-vue": "^1.6.4"<% } %> <% if (UIfrag === 'eleUI') { %>,
+    "element-ui": "^2.13.2" <% } %><% if (UIfrag === 'vant') { %>,
+    "vant": "^2.10.2" <% } %><% if (useVueRouter) { %> ,
+    "vue-router": "^3.4.3"<% } %><% if (useVuex) { %>,
+      "vuex": "^3.5.1" <% } %>
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^4.5.0",
     "@vue/cli-service": "^4.5.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11", 
-    <% if (cssPrep === 'less') { %>"less": "^3.12.2",
-    "less-loader": "^6.2.0" 
-    <%_ } _%>
-    <% if (cssPrep === 'sass') { %>"node-sass": "^4.14.1",
-    "sass-loader": "^9.0.3"
-    <%_ } _%>
+    "vue-template-compiler": "^2.6.11"<% if (cssPrep === 'less') { %>, 
+    "less": "^3.12.2",
+    "less-loader": "^6.2.0" <% } %> <% if (cssPrep === 'sass') { %>,
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.3"<% } %>
   },
   "eslintConfig": {
     "root": true,
