@@ -14,9 +14,7 @@ Vue.use(Antd)
 
 Vue.config.productionTip = false
 new Vue({
-  <%_ if(useVueRouter){ _%>
-    router, <%_ } _%>
-  <%_ if(useVuex){ _%>
-    store,<%_ } _%>
+  <%_ if(useVueRouter){ _%>router, <%_ } _%>
+  <%_ if(useVuex){ _%> store, <%_ } _%>
   render: function (h) { return h(App) },
 }).$mount('#app')
