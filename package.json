@@ -9,16 +9,11 @@
   },
   "dependencies": {
     "vue": "^2.6.11",
-    <% if (UIfrag === 'antVue') { %>"ant-design-vue": "^1.6.4",
-      <%_ } _%> 
-    <% if (UIfrag === 'eleUI') { %>"element-ui": "^2.13.2",
-      <%_ } _%> 
-    <% if (UIfrag === 'vant') { _%>"vant": "^2.10.2", 
-      <%_ } _%> 
-    <% if (useVueRouter) { %> "vue-router": "^3.4.3", 
-      <%_ } _%>
-    <% if (useVuex) { %>"vuex": "^3.5.1"
-      <%_ } _%>
+    <% if (UIfrag === 'antVue') { %>"ant-design-vue": "^1.6.4", <%_ } _%> 
+    <% if (UIfrag === 'eleUI') { %>"element-ui": "^2.13.2", <%_ } _%> 
+    <% if (UIfrag === 'vant') { _%>"vant": "^2.10.2",  <%_ } _%> 
+    <% if (useVueRouter) { %> "vue-router": "^3.4.3", <%_ } _%>
+    <% if (useVuex) { %>"vuex": "^3.5.1" <%_ } _%>
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^4.5.0",
@@ -27,11 +22,9 @@
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11", 
     <% if (cssPrep === 'less') { %>"less": "^3.12.2",
-    "less-loader": "^6.2.0"
-     <%_ } _%>
+    "less-loader": "^6.2.0" <%_ } _%>
     <% if (cssPrep === 'sass') { %>"node-sass": "^4.14.1",
-    "sass-loader": "^9.0.3"<%_ } 
-    _%>
+    "sass-loader": "^9.0.3"<%_ } _%>
   },
   "eslintConfig": {
     "root": true,
