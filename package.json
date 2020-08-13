@@ -10,13 +10,13 @@
   "dependencies": {
     "vue": "^2.6.11",
     <% if (UIfrag === 'antVue') { %>"ant-design-vue": "^1.6.4",
-       <%_ } _%> 
+<%_ } _%> 
     <% if (UIfrag === 'eleUI') { %>"element-ui": "^2.13.2", 
-      <%_ } _%> 
+<%_ } _%> 
     <% if (UIfrag === 'vant') { _%>"vant": "^2.10.2",  
-      <%_ } _%> 
+<%_ } _%> 
     <% if (useVueRouter) { %> "vue-router": "^3.4.3", 
-      <%_ } _%>
+<%_ } _%>
     <% if (useVuex) { %>"vuex": "^3.5.1" 
       <%_ } _%>
   },
