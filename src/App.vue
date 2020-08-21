@@ -1,18 +1,19 @@
 <template>
     <div id="app">
         <img alt="Vue logo" src="./assets/logo.png" />
-        <HelloWorld msg="Welcome to Your Vue.js App" />
+        <%_ if (!useVueRouter) { %><HelloWorld msg="Welcome to Your Vue.js App" /><% } _%>
         <%_ if (useVueRouter) { %><router-view></router-view><% } _%>
     </div>
 </template>
 
 <script>
+<%_ if (!useVueRouter) { %>
 import HelloWorld from "./components/HelloWorld.vue";
-
+<% } _%>
 export default {
     name: "App",
     components: {
-        HelloWorld,
+        <%_ if (!useVueRouter) { %>HelloWorld,<% } _%>
     },
 };
 </script>

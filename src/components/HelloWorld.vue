@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+
+    <p>{{account}}</p>
+    <button @click="addCount">add</button>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -32,8 +35,24 @@
 <script>
 export default {
   name: 'HelloWorld',
+  data(){
+    return{
+      count: 0
+    }
+  },
   props: {
     msg: String
+  },
+  computed:{
+    account() {
+      return this.$store.state.moduleStore.account
+    }
+  },
+  methods:{
+    addCount() {
+      this.count++
+      this.$store.dispatch('moduleStore/addAccount',  this.count)
+    }
   }
 }
 </script>
