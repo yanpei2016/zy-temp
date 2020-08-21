@@ -1,4 +1,4 @@
-{
+module.exports = {
     <%_ if(UIfrag==='vant'){ _%>
     "plugins": [
         [

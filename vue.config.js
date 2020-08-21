@@ -19,15 +19,5 @@ module.exports = {
     　　　　　　　　    }
 　　　　　　    }
         }
-    },
-    plugins: [
-        <%_ if (useVueRouter) { _%>
-        ['import', {
-          libraryName: 'vant',
-          libraryDirectory: 'es',
-          style: true
-        }, 'vant']
-        <%_ } _%>
-      ]
-      
+    },      
 }
