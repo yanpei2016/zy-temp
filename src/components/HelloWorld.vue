@@ -1,8 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <%_ if (useVuex) { _%>
     <p>vuex: </p>
     <p>{{account}}</p>
+    <%_ } _%>
     <%_ if(UIfrag==='vant'){ _%>
     <van-button type="primary" @click="addCount">add</van-button>
     <%_ } _%>
@@ -53,13 +55,20 @@ export default {
   },
   computed:{
     account() {
+    <%_ if (useVuex) { _%>
       return this.$store.state.moduleStore.account
+    <%_ } _%>
+     <%_ if (!useVuex) { _%>
+     return this.count
+    <%_ } _%>
     }
   },
   methods:{
     addCount() {
       this.count++
+      <%_ if (useVuex) { _%>
       this.$store.dispatch('moduleStore/addAccount',  this.count)
+      <%_ } _%>
     }
   }
 }
