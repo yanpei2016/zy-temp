@@ -21,7 +21,7 @@ module.exports = {
         }
     },
     plugins: [
-        <%_ if(UIfrag==='vant')
+        <%_ if (useVueRouter) { _%>
         ['import', {
           libraryName: 'vant',
           libraryDirectory: 'es',
