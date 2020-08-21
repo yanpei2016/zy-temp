@@ -1,9 +1,10 @@
 module.exports = {
-  presets: [
+  
+    <%_ if(UIfrag==='vant'){ _%>
+    presets: [
         '@vue/cli-plugin-babel/preset'
       ],
-    <%_ if(UIfrag==='vant'){ _%>
-    "plugins": [
+    plugins: [
         [
             "import", 
             {
@@ -15,7 +16,10 @@ module.exports = {
     ]
     <%_ } _%>
     <%_ if(UIfrag==='antVue'){ _%>
-    "plugins": [
+    presets: [
+        '@vue/cli-plugin-babel/preset'
+      ],
+    plugins: [
         [
             "import",
              { 
@@ -27,7 +31,7 @@ module.exports = {
     ]
     <%_ } _%>
     <%_ if(UIfrag==='eleUI'){ _%>
-    "presets": [["es2015", { "modules": false }]],
+    "presets": ['@vue/cli-plugin-babel/preset',["es2015", { "modules": false }]],
     "plugins": [
       [
         "component",
@@ -36,5 +40,6 @@ module.exports = {
           "styleLibraryName": "theme-chalk"
         }
       ]
+    ]
     <%_ } _%>
   }
