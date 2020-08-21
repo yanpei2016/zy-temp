@@ -1,9 +1,8 @@
 module.exports = {
-  
+  presets: [
+    '@vue/cli-plugin-babel/preset'
+  ],
     <%_ if(UIfrag==='vant'){ _%>
-    presets: [
-        '@vue/cli-plugin-babel/preset'
-      ],
     plugins: [
         [
             "import", 
@@ -16,9 +15,6 @@ module.exports = {
     ]
     <%_ } _%>
     <%_ if(UIfrag==='antVue'){ _%>
-    presets: [
-        '@vue/cli-plugin-babel/preset'
-      ],
     plugins: [
         [
             "import",
@@ -31,7 +27,6 @@ module.exports = {
     ]
     <%_ } _%>
     <%_ if(UIfrag==='eleUI'){ _%>
-    "presets": [["es2015", { "modules": false }]],
     "plugins": [
       [
         "component",
