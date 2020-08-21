@@ -4,13 +4,13 @@
     <p>vuex: </p>
     <p>{{account}}</p>
     <%_ if(UIfrag==='vant'){ _%>
-    <van-button @click="addCount">add</van-button>
+    <van-button type="primary" @click="addCount">add</van-button>
     <%_ } _%>
     <%_ if(UIfrag==='antVue'){ _%>
-    <a-button @click="addCount">add</a-button>
+    <a-button type="primary" @click="addCount">add</a-button>
     <%_ } _%>
     <%_ if(UIfrag==='eleUI'){ _%>
-    <el-button @click="addCount">add</el-button>
+    <el-button type="primary" @click="addCount">add</el-button>
     <%_ } _%>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
