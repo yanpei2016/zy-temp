@@ -4,15 +4,14 @@ import App from './App.vue'
 <%_ } _%>
 <%_ if (useVuex) { _%>import store from './store' 
 <%_ } _%>
-<%_ if(UIfrag==='eleUI'){ _%>import {} from 'element-ui' 
+<%_ if(UIfrag==='eleUI'){ _%>import { Button } from 'element-ui' 
 <%_ } _%>
-<%_ if(UIfrag==='vant'){ _%>import {} from 'vant'
+<%_ if(UIfrag==='vant'){ _%>import { Button } from 'vant'
 <%_ } _%>
-<%_ if(UIfrag==='antVue'){ _%>import {}  from 'ant-design-vue';
+<%_ if(UIfrag==='antVue'){ _%>import { Button }  from 'ant-design-vue';
 <%_ } _%>
-<%_ if(UIfrag==='antVue'){ _%>import 'ant-design-vue/dist/antd.css';
-<%_ } _%>
-Vue.use()
+
+Vue.use(Button)
 Vue.config.productionTip = false
 new Vue({
   <% if(useVueRouter){ %>router,<% } %>
