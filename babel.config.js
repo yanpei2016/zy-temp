@@ -1,4 +1,7 @@
 module.exports = {
+  presets: [
+        '@vue/cli-plugin-babel/preset'
+      ],
     <%_ if(UIfrag==='vant'){ _%>
     "plugins": [
         [
@@ -34,5 +37,4 @@ module.exports = {
         }
       ]
     <%_ } _%>
-
   }

@@ -3,7 +3,15 @@
     <h1>{{ msg }}</h1>
     <p>vuex: </p>
     <p>{{account}}</p>
-    <button @click="addCount">add</button>
+    <%_ if(UIfrag==='vant'){ _%>
+    <van-button @click="addCount">add</van-button>
+    <%_ } _%>
+    <%_ if(UIfrag==='antVue'){ _%>
+    <a-button @click="addCount">add</a-button>
+    <%_ } _%>
+    <%_ if(UIfrag==='eleUI'){ _%>
+    <el-button @click="addCount">add</el-button>
+    <%_ } _%>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
