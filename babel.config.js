@@ -31,7 +31,7 @@ module.exports = {
     ]
     <%_ } _%>
     <%_ if(UIfrag==='eleUI'){ _%>
-    "presets": ['@vue/cli-plugin-babel/preset',["es2015", { "modules": false }]],
+    "presets": [["es2015", { "modules": false }]],
     "plugins": [
       [
         "component",

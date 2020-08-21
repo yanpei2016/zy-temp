@@ -16,12 +16,13 @@
     "vuex": "^3.5.1" <% } %>
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2"
+    "babel-plugin-import": "^1.13.0",<% if (UIfrag !== 'eleUI') { %>
+    "@vue/cli-plugin-babel": "^4.5.0",<% } %><% if (UIfrag === 'eleUI') { %>
+    "babel-plugin-component": "^1.1.1",<% } %>
     "@vue/cli-plugin-eslint": "^4.5.0",
     "@vue/cli-service": "^4.5.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "babel-plugin-import": "^1.13.0",
     "vue-template-compiler": "^2.6.11"<% if (cssPrep === 'less') { %>, 
     "less": "^3.12.2",
     "less-loader": "^6.2.0" <% } %> <% if (cssPrep === 'sass') { %>,
