@@ -17,8 +17,8 @@
   },
   "devDependencies": {
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",<% if (UIfrag !== 'eleUI') { %>
-    "babel-plugin-import": "^1.13.0",<% } %><% if (UIfrag === 'eleUI') { %>
+    "eslint-plugin-vue": "^6.2.2",
+    "babel-plugin-import": "^1.13.0",<% if (UIfrag === 'eleUI') { %>
     "babel-plugin-component": "^1.1.1",<% } %>
     "@vue/cli-plugin-babel": "^4.5.0",
     "@vue/cli-plugin-eslint": "^4.5.0",
