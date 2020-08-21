@@ -1,8 +1,8 @@
 <template>
     <div id="app">
         <img alt="Vue logo" src="./assets/logo.png" />
-        <%_ if (!useVueRouter) { %><HelloWorld msg="Welcome to Your Vue.js App" /><% } _%>
-        <%_ if (useVueRouter) { %><router-view></router-view><% } _%>
+        <% if (!useVueRouter) { %><HelloWorld msg="Welcome to Your Vue.js App" /><% } %>
+        <% if (useVueRouter) { %><router-view></router-view><% } %>
     </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-
+    <p>vuex: </p>
     <p>{{account}}</p>
     <button @click="addCount">add</button>
     <p>
