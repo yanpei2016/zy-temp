@@ -18,7 +18,8 @@
   "devDependencies": {
     "axios": "^0.18.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint-plugin-vue": "^6.2.2",<% if (UIfrag === 'vant') { %>
+    "postcss-pxtorem": "^5.1.1",<% } %>
     "babel-plugin-import": "^1.13.0",<% if (UIfrag === 'eleUI') { %>
     "babel-plugin-component": "^1.1.1",<% } %>
     "@vue/cli-plugin-babel": "^4.5.0",

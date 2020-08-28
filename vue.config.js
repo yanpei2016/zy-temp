@@ -1,3 +1,7 @@
+<%_ if(UIfrag==='vant'){ _%>
+    const autoprefixer = require('autoprefixer');
+    const pxtorem = require('postcss-pxtorem');
+<%_ } _%>
 module.exports = {
     // publicPath: process.env.NODE_ENV === 'production' ? '/production-sub-path/' : '/'
     // outputDir: 'dist',
@@ -5,6 +9,23 @@ module.exports = {
     filenameHashing: true,
     // 如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建
     productionSourceMap: false,
+    <%_ if(UIfrag==='vant'){ _%>
+        css: {
+            loaderOptions: {
+                postcss: {
+                    plugins: [
+                        autoprefixer({
+                            overrideBrowserslist: ['Android >= 4.0', 'iOS >= 7']
+                        }),
+                        pxtorem({
+                            rootValue: 41.4,
+                            propList: ['*'],
+                        })
+                    ]
+                }
+            }
+        },
+    <%_ } _%>
     devServer: {
         open: true,//设置自动打开
         port: 1880,//设置端口
