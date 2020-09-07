@@ -18,6 +18,7 @@
   "devDependencies": {
     "axios": "^0.18.0",
     "eslint": "^6.7.2",
+    "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-vue": "^6.2.2",<% if (UIfrag === 'vant') { %>
     "postcss-pxtorem": "^5.1.1",<% } %>
     "babel-plugin-import": "^1.13.0",<% if (UIfrag === 'eleUI') { %>
@@ -41,9 +42,18 @@
       "eslint:recommended"
     ],
     "parserOptions": {
-      "ecmaVersion": 2020
+      "ecmaVersion": 6
     },
-    "rules": {}
+    "rules": {
+      "vue/html-self-closing": "off",
+      "vue/no-parsing-error": [2, {
+      "x-invalid-end-tag": true
+      }]
+    },
+    "plugins": [
+      "html",
+      "vue"	
+    ]
   },
   "browserslist": [
     "> 1%",
